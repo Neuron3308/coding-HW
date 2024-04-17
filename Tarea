@@ -1,0 +1,14 @@
+#T1
+alumnos = {"Hector":9.8, "Jaciel":8.9, "Carlos":9.7, "Natalia":9, "Gretel":9.4, "Jaime":8.6, "Angel":7.6, "Wilbur":8.7, "Ingrid":10, "Jonathan":9.5}
+for clave, valor in alumnos.items():
+  print(clave, valor)
+
+#T2
+alumnos = {"Hector":9.8, "Jaciel":8.9, "Carlos":9.7, "Natalia":9, "Gretel":9.4, "Jaime":8.6, "Angel":7.6, "Wilbur":8.7, "Ingrid":10, "Jonathan":9.5}
+for i in sorted(alumnos):
+  print(i, alumnos)
+
+#T3
+alumnos = {"Hector":9.8, "Jaciel":8.9, "Carlos":9.7, "Natalia":9, "Gretel":9.4, "Jaime":8.6, "Angel":7.6, "Wilbur":8.7, "Ingrid":10, "Jonathan":9.5}
+for i in sorted(alumnos):
+  print(i)
