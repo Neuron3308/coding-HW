@@ -14,3 +14,253 @@ for i in sorted(alumnos):
 alumnos = {"Hector":9.8, "Jaciel":8.9, "Carlos":9.7, "Natalia":9, "Gretel":9.4, "Jaime":8.6, "Angel":7.6, "Wilbur":8.7, "Ingrid":10, "Jonathan":9.5}
 for i in sorted(alumnos):
   print(i)
+
+#1
+
+diccionario = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, "G": 1}
+
+unicos = {}
+
+
+for k, v in diccionario.items():
+    if v not in unicos.values():
+        unicos[k] = v
+
+print(unicos)
+
+#2
+
+Diccionario={
+    "César":2,
+    "Sasu":3,
+    "Aramis":5,
+    "Nathalia":6
+}
+
+x=input("Clave a eliminar: ")
+del Diccionario[x]
+print(Diccionario)
+
+#3
+
+L = ["A", "B", "C", "D", "E", "F"]
+X = [1, 2, 3, 4, 5, 6]
+
+diccionario = dict(zip(L, X))
+print(diccionario)
+
+#4
+
+Diccionario={
+    "César":2,
+    "Sasu":3,
+    "Aramis":5,
+    "Nathalia":6
+}
+
+x=dict(sorted(Diccionario.items()))
+print(x)
+
+#5
+
+diccionario = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6}
+print(diccionario)
+llave_minimo = min(diccionario.keys(), key=lambda k: diccionario[k])
+print(llave_minimo, diccionario[llave_minimo])
+llave_maxima = max(diccionario.keys(), key=lambda k: diccionario[k])
+print(llave_maxima, diccionario[llave_maxima])
+
+#6
+
+class Color(object):
+    def _init_(self, rojo, verde, azul):
+        self.rojo = rojo
+        self.verde = verde
+        self.azul = azul
+negro = Color(0, 0 ,0)
+
+print(negro)
+
+negro_dict = negro._dict_
+
+print(type(negro_dict))
+print(negro_dict)
+
+azul = Color(0, 0, 255)
+azul_dict = azul._dict_
+
+print(azul_dict)
+
+#7.
+
+diccionario = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, "G": 1}
+
+unicos = {}
+
+
+for k, v in diccionario.items():
+    if v not in unicos.values():
+        unicos[k] = v
+
+print(unicos)
+
+#8
+
+Diccionario_1={
+    "César":2,
+    "Sasu":3,
+    "Aramis":5,
+    "Nathalia":6
+}
+
+Diccionario_2={}
+
+Diccionarios=[Diccionario_1,Diccionario_2]
+
+for i in range(0,len(Diccionarios)):
+    if len(Diccionarios[i]) == 0:
+        print(f"El diccionario {i+1} esta vacio")
+    else:
+        print(f"El diccionario {i+1} no esta vacio")
+        
+#(9,10,11).
+L = []
+d1 = {'Matematicas': 90, 'ciencia': 92}
+d2 = {'matematicas': 89, 'ciencia': 94}
+d3 = {'Matematicas': 92, 'ciencia': 88}
+diccionario = [d1, d2, d3]
+
+        
+for i in d1.values():
+    L.append(i)
+for i in d2.values():
+    L.append(i)
+for i in d3.values():
+    L.append(i)
+        #for j in k:
+         #   L.append(j)
+print(L)
+
+L = []
+diccionario = [{'matematicas': 90, 'ciencia': 92}, {'Matematicas': 89, 'ciencia': 94}, {'Matematicas': 92, 'ciencia': 88}] 
+
+for i in diccionario:
+    L.append(i)
+print(L)
+
+L = []
+W = []
+diccionario = [{'Matematicas': 90, 'ciencia': 92}, {'Matematicas': 89, 'ciencia': 94}, {'Matematicas': 92, 'ciencia': 88}] 
+
+for i in diccionario:
+    L.append(i)
+
+d1 = L[0]
+d2 = L[1]
+d3 = L[2]
+
+for i in d1:
+    W.append(i)
+W.remove('ciencia')
+for i in d1.values(),d2.values(),d3.values():
+    W.append(i)
+
+#print(d1)
+print(W)
+
+#13
+
+u = 0
+def depth(diccionario):
+    if isinstance(diccionario, dict):
+        return 1 + (max(map(depth, diccionario.values())))
+    else:
+        return 0
+
+d1 = {"a": {"b": {"c":{"d" : 1}}}}
+
+resultado = depth(d1)
+print(resultado)
+
+#14
+
+Diccionario={
+    'Fisica': 23, 
+    'Matematicas': 8,
+    "Quimica":32,
+    "Phisoclogia":108
+}
+
+def llave_por_indice(Diccionario,indice):
+    lista_Diccionario=list(Diccionario)
+    return(lista_Diccionario[indice])
+    
+print(llave_por_indice(Diccionario,0),llave_por_indice(Diccionario,1),llave_por_indice(Diccionario,2))
+
+#15
+
+L = []
+W = []
+J = []
+K = []
+H = []
+P = []
+G = []
+d1 = {1: 'rojo', 2: 'verde', 3: 'negro', 4: 'blanco', 5: 'negro'}
+for i in d1:
+    L.append(i)
+    L.append(d1[i])
+W.append(L[0])
+W.append(L[1])
+J.append(L[2])
+J.append(L[3])
+K.append(L[4])
+K.append(L[5])
+H.append(L[6])
+H.append(L[7])
+P.append(L[8])
+P.append(L[9])
+G.append(W)
+G.append(J)
+G.append(K)
+G.append(H)
+G.append(P)
+print(G)
+
+for i in range(0,len(Colores)):
+    lista_1=[llave_por_indice(Colores,i),Colores[llave_por_indice(Colores,i)]]
+    lista.append(lista_1)
+    
+print(lista)
+
+#16
+
+Diccionario_1= {
+    'V': [1, 4, 6, 10], 
+    'VI': [1, 4, 12], 
+    'VII': [1, 3, 8]
+}
+
+Diccionario_2={
+    'V': [1, 3, 5], 
+    'VI': [1, 5], 
+    'VII': [2, 7, 9]
+}
+
+def llave_por_indice(Diccionario,indice):
+    lista_Diccionario=list(Diccionario)
+    return(lista_Diccionario[indice])
+
+def filtrar_pares(Diccionario):
+    for i in range(0,len(Diccionario)):
+        y=llave_por_indice(Diccionario,i)
+        x=Diccionario[y]
+        lista=[]
+        for j in range(0,len(x)):
+            if not x[j]%2==1:
+                lista.append(x[j])
+        Diccionario[str(y)]=lista
+    return (Diccionario)
+
+print(filtrar_pares(Diccionario_1))
+print(filtrar_pares(Diccionario_2))
